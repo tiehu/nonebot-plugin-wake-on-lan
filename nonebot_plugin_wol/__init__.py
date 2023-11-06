@@ -22,7 +22,7 @@ __plugin_meta__ = PluginMetadata(
     type="application",
     homepage="https://github.com/tiehu/nonebot-plugin-wol",
     config=Config,
-    supported_adapters={"~telegram"},
+    supported_adapters=None,
 )
 
 async def time_check():
