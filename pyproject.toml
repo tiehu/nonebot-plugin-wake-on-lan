@@ -1,0 +1,13 @@
+[project]
+name = "nonebot-plugin-wol"
+version = "1.0.0"
+description = "The Wake-on-LAN plugin for nonebot2"
+authors = ["tiehu"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/tiehu/nonebot-plugin-wol"
+repository = "https://github.com/tiehu/nonebot-plugin-wol"
+dependencies = [
+    "python>=3.9",
+    "nonebot2>=2.0.0"
+]
