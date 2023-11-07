@@ -6,16 +6,16 @@
 
 <div align="center">
 
-# nonebot-plugin-wol
+# nonebot-plugin-wake-on-lan
 
 _✨ Nonebot 局域网唤醒插件 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/tiehu/nonebot-plugin-wol.svg" alt="license">
+    <img src="https://img.shields.io/github/license/tiehu/nonebot-plugin-wake-on-lan.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-wol">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-wol.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-wake-on-lan">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-wake-on-lan.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
 
@@ -41,7 +41,7 @@ _✨ Nonebot 局域网唤醒插件 ✨_
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装。
 
-    nb plugin install nonebot-plugin-wol
+    nb plugin install nonebot-plugin-wake-on-lan
 
 </details>
 
@@ -52,7 +52,7 @@ _✨ Nonebot 局域网唤醒插件 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-wol
+    pip install nonebot-plugin-wake-on-lan
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
