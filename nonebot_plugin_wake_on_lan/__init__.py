@@ -213,7 +213,7 @@ async def user_list(bot, event, user, args):
 async def help(bot, event):
     help_info = """wol命令帮助：
     wol wake [设备名称]
-    唤醒目标设备
+    唤醒目标设备。
     wol device set [设备名称] [广播IP] [MAC地址] [端口号（通常为9）]
     添加或设置一台设备用于唤醒（设置已有设备将会覆盖原配置）。
     示例：wol device set my_device 172.16.0.255 1A:2B:3C:4D:5E:6F 9
