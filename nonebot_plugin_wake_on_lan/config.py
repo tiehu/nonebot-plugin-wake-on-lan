@@ -50,7 +50,4 @@ class Config(BaseModel):
             for item in v[key]:
                 if not isinstance(item, int):
                     raise ValueError(f"配置项读取错误：配置项“wol_curfew”中的“{key}”内的所有元素必须为整数！")
-        start_time = ":".join(map(str, v["start_time"]))
-        end_time = ":".join(map(str, v["end_time"]))
-        logger.info(f"当前设置的宵禁时间为：每天{start_time}-{end_time}。")
         return v

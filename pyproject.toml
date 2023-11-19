@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-wake-on-lan"
-version = "0.1.3"
+version = "0.1.4"
 description = "The Wake-on-LAN plugin for nonebot2"
 authors = ["tiehu"]
 license = "MIT"

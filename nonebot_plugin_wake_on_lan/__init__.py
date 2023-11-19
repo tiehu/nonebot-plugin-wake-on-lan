@@ -31,7 +31,6 @@ async def time_check():
     current_time = datetime.datetime.now().time()
     start_time = datetime.time(*plugin_config.wol_curfew["start_time"])
     end_time = datetime.time(*plugin_config.wol_curfew["end_time"])
-    zero_time = datetime.time(0, 0, 0)
     if start_time == end_time:
         return True
     if start_time > end_time:
@@ -81,7 +80,9 @@ async def wake(bot, event, user, args):
         await bot.send(event, f"权限不足，如果你确信这是一个错误，请联系插件管理员将此ID加入到唤醒权限列表中：{user}")
         return
     elif not user in plugin_config.wol_admin and not await time_check():
-        await bot.send(event, "当前处于宵禁时间内，只有插件管理员有权唤醒设备")
+        start_time = ":".join(map(str, plugin_config.wol_curfew["start_time"]))
+        end_time = ":".join(map(str, plugin_config.wol_curfew["end_time"]))
+        await bot.send(event, f"当前处于宵禁时间内，只有插件管理员有权唤醒设备。\n当前宵禁时间为：每天{start_time}~{end_time}")
         return
     ip = plugin_data[args[2]]["ip"]
     mac = plugin_data[args[2]]["mac"]
