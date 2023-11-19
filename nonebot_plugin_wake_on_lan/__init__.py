@@ -68,7 +68,7 @@ async def wol(bot: Bot, event: Event):
         elif args[2] == "list":
             await user_list(bot, event, user, args)
     else:
-        await bot.send(event, "参数不正确，请使用wol help查看使用方法。")
+        await bot.send(event, "参数不正确，请使用wol help查看使用方法")
 
 async def wake(bot, event, user, args):
     if len(args) != 3:
@@ -78,7 +78,7 @@ async def wake(bot, event, user, args):
         await bot.send(event, "指定的设备不存在")
         return
     elif not user in plugin_config.wol_admin and not user in plugin_data[args[2]]["user"]:
-        await bot.send(event, "权限不足")
+        await bot.send(event, f"权限不足，如果你确信这是一个错误，请联系插件管理员将此ID加入到唤醒权限列表中：{user}")
         return
     elif not user in plugin_config.wol_admin and not await time_check():
         await bot.send(event, "当前处于宵禁时间内，只有插件管理员有权唤醒设备")
@@ -91,7 +91,7 @@ async def wake(bot, event, user, args):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
     s.sendto(send_data, (ip, port))
-    await bot.send(event, "已向目标设备发送魔术封包。")
+    await bot.send(event, "已向目标设备发送魔术封包")
 
 async def device_set(bot, event, user, args):
     if not user in plugin_config.wol_admin:
@@ -222,7 +222,7 @@ async def help(bot, event):
     wol device list
     查看当前设备列表。
     wol user add/remove [设备名称] [用户ID]
-    授予一位用户指定设备的唤醒权限。
+    授予/撤销一位用户对指定设备的唤醒权限。
     wol user list [设备名称]
     查看拥有指定设备唤醒权限的用户列表。
     wol help
